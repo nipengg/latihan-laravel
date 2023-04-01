@@ -6,13 +6,17 @@ use Illuminate\Http\Request;
 
 class WebController extends Controller
 {
-    public function index(Request $request)
+    public function welcome(Request $request)
     {
-        return view('home');
+        return view('Welcome');
     }
 
-    public function about(Request $request)
+    public function admin(Request $request)
     {
-        return view('about');
+        return view('admin');
+    }
+    public function indexAdmin(Request $request)
+    {
+        return view('indexAdmin');
     }
 }

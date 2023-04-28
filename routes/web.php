@@ -16,12 +16,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [\App\Http\Controllers\WebController::class, 'Welcome']);
 
-Route::group(['prefix' => '/admin'], function() {
+Route::group(['prefix' => '/admin'], function () {
     Route::get('/dashboard', function () {
         return view('admin');
-    });
+    })->name('admin.home');
+    Route::resource('/portfolios', \App\Http\Controllers\PortfolioController::class);
 });
 Auth::routes([
-    'register' => false,
-    'confirm' => false,
+    // 'register' => false,
+    // 'confirm' => false,
 ]);

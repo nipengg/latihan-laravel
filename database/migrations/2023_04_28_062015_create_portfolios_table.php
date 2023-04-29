@@ -13,10 +13,11 @@ return new class extends Migration
     {
         Schema::create('portfolios', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('category_id')->nullable();
-            $table->string('image_file_url');
             $table->string('title');
             $table->text('description');
+            $table->string('image_file_url');
+            $table->string('url')->nullable();
+            $table->enum('category', ['Desktop', 'Web', 'Mobile']);
             $table->timestamps();
         });
     }

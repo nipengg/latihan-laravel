@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Portfolio;
 
 class WebController extends Controller
 {
     public function welcome(Request $request)
     {
-        return view('Welcome');
+        $data = Portfolio::all();
+        return view('Welcome', compact('data'));
     }
 
     public function admin(Request $request)

@@ -60,7 +60,7 @@
             <li class="nav-item active">
                 <a class="nav-link" href="{{ route('portfolios.index') }}">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
+                    <span>Portfolio</span></a>
             </li>
 
             <!-- Divider -->
